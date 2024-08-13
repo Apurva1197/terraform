@@ -9,7 +9,7 @@ terraform {
 
 provider "aws" {
   # Configuration options
-  region = var.region
+  region = ""
 }
 
 ##### Try to create one ubuntu server
@@ -19,9 +19,9 @@ resource "aws_instance" "this"  {
   key_name                = "nishu"
 
   tags = {
-#     Enviorment = "staging"
-#     owner = "jarvis"    
-#   }
+    Enviorment = "staging"
+    owner = "jarvis"    
+  }
   
 
 }
