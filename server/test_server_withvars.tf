@@ -55,7 +55,7 @@ variable "tags" {
   type = map
   default = {
     Enviorment = "staging"
-    owner = "jarvis"    
+    owner = "jarvis"    SSSs
   }
 }
 
