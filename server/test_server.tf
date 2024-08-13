@@ -28,8 +28,6 @@ output "EC2" {
 
 
 
-######################################
-# Now we are calling the variables
 
 
 
