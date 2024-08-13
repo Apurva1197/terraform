@@ -23,7 +23,7 @@ resource "aws_instance" "this" {
 }
 
 output "EC2" {
-  value = 
+  value = here we are trying 
 }
 
 
