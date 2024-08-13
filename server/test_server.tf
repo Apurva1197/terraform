@@ -23,7 +23,7 @@ resource "aws_instance" "this" {
 }
 
 output "EC2" {
-  value = var.value 
+  value = 
 }
 
 
