@@ -23,7 +23,7 @@ resource "aws_instance" "this" {
 }
 
 output "EC2" {
-  value = here we are trying to create server"
+  value = "here we are trying to create server"
 }
 
 
