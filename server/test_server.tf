@@ -31,32 +31,7 @@ output "EC2" {
 ######################################
 # Now we are calling the variables
 
-variable "region" {
-  default = "ap-south-1"
-  description = "region calling"
-}
 
-variable "ami" {
-  default = "ami-0ad21ae1d0696ad58"
-  description = "ami calling"
-}
-
-variable "instance_type" {
-  default = "t2.medium"
-  description = "server size calling"
-}
-
-variable "key_name" {
-  default = "hybrid"
-  description = "key calling"
-}
-
-variable "tags" {
-  type = map
-  default = {
-    Enviorment = "staging"
-    owner = "jarvis"    
-  }
 }
 
 variable "value" {
