@@ -18,7 +18,7 @@ resource "aws_instance" "this" {
   instance_type           = "t2.micro"
   key_name                = "nishu"
 
-  tags = default = {
+  tags = {
 #     Enviorment = "staging"
 #     owner = "jarvis"    
 #   }
