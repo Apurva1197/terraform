@@ -32,12 +32,8 @@ output "EC2" {
 # Now we are calling the variables
 
 
-}
 
-variable "value" {
-  default = "Here we are trying to create machine"
-  description = "output block calling"
-}
+
 
 
 
