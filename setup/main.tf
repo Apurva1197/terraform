@@ -30,8 +30,8 @@ resource "aws_instance" "server_1" {
 }
 
 # resource block for key creation
-resource "aws_key_pair" "de" {
-  key_name   = 
+resource "aws_key_pair" "deployer" {
+  key_name   = deployer_key
   public_key = 
 }
 
