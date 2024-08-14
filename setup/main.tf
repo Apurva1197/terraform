@@ -30,6 +30,7 @@ resource "aws_instance" "server_1" {
     tags = var.tags
 }
 
+# resour
 
 
 
