@@ -35,7 +35,7 @@ resource "aws_key_pair" "deployer" {
   public_key = 
 }
 
-#resource bloc
+#resource block for security group creation
 resource "aws_security_group" "sg-webserver" {
     vpc_id              = aws_vpc.vpc.id
     name                = "webserver"
@@ -43,12 +43,11 @@ resource "aws_security_group" "sg-webserver" {
 
     dynamic "ingress" {
         for_each = local.inbound_ports
-        content {
             from_port   = ingress.value
             to_port     = ingress.value
             protocol    = "tcp"
             cidr_blocks = [ "0.0.0.0/0" ]
-        }
+        
     }
 
 
