@@ -35,6 +35,7 @@ resource "aws_key_pair" "deployer" {
   public_key = 
 }
 
+
 resource "aws_security_group" "sg-webserver" {
     vpc_id              = aws_vpc.vpc.id
     name                = "webserver"
