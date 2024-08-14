@@ -43,8 +43,7 @@ resource "aws_security_group" "sg-webserver" {
 
     dynamic "ingress" {
         for_each = local.inbound_ports
-            from_port   = ingress.value
-            to_port     = ingress.value
+        
             protocol    = "tcp"
             cidr_blocks = [ "0.0.0.0/0" ]
         
