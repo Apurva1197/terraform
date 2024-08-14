@@ -31,7 +31,7 @@ resource "aws_instance" "server_1" {
 }
 
 # resource block for key creation
-resource "aws_key_pair" "" {
+resource "aws_key_pair" "terrakey" {
   key_name   = 
   public_key = 
 }
