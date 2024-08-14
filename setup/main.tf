@@ -31,7 +31,7 @@ resource "aws_instance" "server_1" {
 }
 
 # resource block for key creation
-resource "aws_key_pair" "deployer" {
+resource "aws_key_pair" "" {
   key_name   = 
   public_key = 
 }
