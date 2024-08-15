@@ -22,12 +22,7 @@ resource "aws_dynamodb_table" "state_lock_table" {
 }
 
 
-# resource block for server creation
-resource "aws_instance" "server_1" {
-    ami = var.ami
-    instance_type = var.instance_type
-    tags = var.tags
-}
+
 
 # resource block for key creation
 resource "aws_key_pair" "deployer" {
@@ -47,6 +42,13 @@ resource "aws_security_group" "sg-webserver" {
         cidr_blocks = [ "0.0.0.0/0" ]
         
     }
+
+    # resource block for server creation
+resource "aws_instance" "server_1" {
+    ami = var.ami
+    instance_type = var.instance_type
+    tags = var.tags
+}
 
 
 
