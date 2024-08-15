@@ -14,7 +14,7 @@ variable "instance_type" {
   description = "calling instance type"
 }
 
-variable "aws_key__id" {
+variable "aws_key_pair_id" {
     # default = "hybrid"
     description = "calling key-pair"
 }
