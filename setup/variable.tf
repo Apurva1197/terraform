@@ -14,10 +14,7 @@ variable "instance_type" {
   description = "calling instance type"
 }
 
-variable "key_name" {
-    # default = "hybrid"
-    description = "calling key-pair"
-}
+v/
 
 variable "tags" {
     type = map
