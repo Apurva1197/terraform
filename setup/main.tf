@@ -46,7 +46,8 @@ resource "aws_instance" "server_1" {
     ami           = var.ami
     instance_type = var.instance_type
     tags          = var.tags
-    key_name      = aws_key
+    key_name      = aws_key_pair.deployer.key_name
+    security
 
 }
 
