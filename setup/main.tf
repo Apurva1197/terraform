@@ -66,8 +66,8 @@ resource "aws_instance" "server_1" {
     # security_group = data.aws_security_group.terraform_sg.id
     user_data      = {
       #!/bin/bash
-sudo -i
-                     sudo apt update -y
+      sudo -i
+      sudo apt update -y
                      sudo apt install nginx -y
                      echo "Welcome to my nginx homepage $HOSTNAME" > /var/www/index.nginx-debian.html
                      sudo systemctl start nginx
