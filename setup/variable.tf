@@ -19,7 +19,7 @@ variable "key_name" {
     description = "calling key-pair"
 }
 
-variable "security_group" {
+variable "awssecurity_group" {
     # default = "hybrid"
     description = "calling security-group"
 }
