@@ -71,8 +71,8 @@ resource "aws_instance" "server_1" {
       sudo apt install nginx -y
       echo "Welcome to my nginx homepage $HOSTNAME" > /var/www/index.nginx-debian.html
       sudo systemctl start nginx
-                    sudo systemctl enable nginx
-                     sudo systemctl status nginx
+      sudo systemctl enable nginx
+      sudo systemctl status nginx
 
 
 
