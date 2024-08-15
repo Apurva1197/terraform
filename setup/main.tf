@@ -56,7 +56,7 @@ resource "aws_instance" "server_1" {
     instance_type  = var.instance_type
     tags           = var.tags
     key_name       = aws_key_pair.deployer.key_name
-    security_group = data.aws_security_group.terraform_sg.
+    security_group = data.aws_security_group.terraform_sg.id
 
 }
 
