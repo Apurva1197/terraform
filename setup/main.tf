@@ -44,7 +44,8 @@ resource "aws_security_group" "terraform_sg" {name        = "terraform_sg"
       cidr_blocks = ["0.0.0.0/0"]
     }
   }
-  }
+  
+}
 
 # data block for sg
 data "aws_security_group" "terraform_sg" {
