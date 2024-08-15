@@ -19,6 +19,11 @@ variable "key_name" {
     description = "calling key-pair"
 }
 
+variable "key_name" {
+    # default = "hybrid"
+    description = "calling key-pair"
+}
+
 
 variable "tags" {
     type = map
