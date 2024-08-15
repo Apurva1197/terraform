@@ -14,16 +14,16 @@ variable "instance_type" {
   description = "calling instance type"
 }
 
-variable "key_name" {
-    # default = "hybrid"
-    description = "calling key-pair"
-}
+# variable "key_name" {
+#     # default = "hybrid"
+#     description = "calling key-pair"
+# }
 
-variable "tags" {
-    type = map
-    # default = {
-    # Name = "Development-server"
-    # Enviorment = "staging"
-    # Owner = "jarvis"
-    # }
-}
+# variable "tags" {
+#     type = map
+#     # default = {
+#     # Name = "Development-server"
+#     # Enviorment = "staging"
+#     # Owner = "jarvis"
+#     # }
+# }
