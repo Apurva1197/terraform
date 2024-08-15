@@ -49,6 +49,7 @@ resource "aws_security_group" "terraform_sg" {
 data "aws_security_group" "terraform_sg" {
   id = var.aws_security_group_id
 }
+
 # resource block for server creation
 resource "aws_instance" "server_1" {
     ami           = var.ami
