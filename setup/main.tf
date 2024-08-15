@@ -39,9 +39,8 @@ resource "aws_security_group" "sg-webserver" {
         for_each    = [80,22,8080,3306]
         protocol    =  "tcp"
         cidr_blocks = [ "0.0.0.0/0" ]
-        
-    }
-
+      }
+}
 
 # resource block for server creation
 resource "aws_instance" "server_1" {
