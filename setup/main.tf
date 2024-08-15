@@ -24,36 +24,36 @@ resource "aws_dynamodb_table" "state_lock_table" {
 
 
 
-# resource block for key creation
-resource "aws_key_pair" "deployer" {
-  key_name   = "deployer"
-  public_key = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMs8SVkQw179X+s4+pCJqCCLHH2z48wdfGOK5PRlzlpc
-}
+# # resource block for key creation
+# resource "aws_key_pair" "deployer" {
+#   key_name   = "deployer"
+#   public_key = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMs8SVkQw179X+s4+pCJqCCLHH2z48wdfGOK5PRlzlpc
+# }
 
-#resource block for security group creation
-resource "aws_security_group" "terraform_sg" {
-  name        = "terraform_sg"
-  description = "Allow sg inbound traffic"
-  dynamic "ingress" {
-    for_each = [80,22,8080,3306]
-    iterator = port
-    content {
-      from_port   = port.value
-      to_port     = port.value
-      protocol    = "tcp"
-      cidr_blocks = ["0.0.0.0/0"]
-    }
-  }
+# #resource block for security group creation
+# resource "aws_security_group" "terraform_sg" {
+#   name        = "terraform_sg"
+#   description = "Allow sg inbound traffic"
+#   dynamic "ingress" {
+#     for_each = [80,22,8080,3306]
+#     iterator = port
+#     content {
+#       from_port   = port.value
+#       to_port     = port.value
+#       protocol    = "tcp"
+#       cidr_blocks = ["0.0.0.0/0"]
+#     }
+#   }
 
-# data block for sg
-data "aws_security_group" "terraform_sg" {
-  id = var.aws_security_group_id
-}
+# # data block for sg
+# data "aws_security_group" "terraform_sg" {
+#   id = var.aws_security_group_id
+# }
 
-# data block for key
-data "aws_key_pair" "deployer" {
-  id = var.aws_key_pair_id
-}
+# # data block for key
+# data "aws_key_pair" "deployer" {
+#   id = var.aws_key_pair_id
+# }
 # resource block for server creation
 resource "aws_instance" "server_1" {
     ami            = var.ami
