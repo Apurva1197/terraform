@@ -27,7 +27,7 @@ resource "aws_dynamodb_table" "state_lock_table" {
 # resource block for key creation
 resource "aws_key_pair" "deployer" {
   key_name   = "deployer"
-  public_key = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF3jdowZJ/fBcqKaNUhhcgwlsyw6wa1f9FN+aw1ye63U ubuntu@ip-172-31-17-82
+  public_key = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF3jdowZJ/fBcqKaNUhhcgwlsyw6wa1f9FN+aw1ye63U
 
 }
 
