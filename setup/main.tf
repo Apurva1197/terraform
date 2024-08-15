@@ -32,9 +32,19 @@ resource "aws_key_pair" "deployer" {
 
 
 #resource block for security group creation
-resource "aws_security_group" "terraform_sg" {
-  
-}  
+resource "aws_security_group" "terraform_sg" {name        = "terraform_sg"
+  description = "Allow sg inbound traffic"
+  dynamic "ingress" {
+    for_each = [80,22,8080,3306]
+    iterator = port
+    content {
+      from_port   = port.value
+      to_port     = port.value
+      protocol    = "tcp"
+      cidr_blocks = ["0.0.0.0/0"]
+    }
+  }
+  }
 
 # data block for sg
 data "aws_security_group" "terraform_sg" {
