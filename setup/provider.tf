@@ -8,7 +8,7 @@ terraform {
     backend "s3" {
     bucket = "terraform-state-bucket-cdec-b37"
     key    = "terraform.tfstate"
-    region = "ap-south-1"
+    region = "us-east-1"
     dynamodb_table = "terraform_state_lock"
     }
 }
