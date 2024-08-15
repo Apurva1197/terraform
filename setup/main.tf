@@ -34,7 +34,7 @@ resource "aws_key_pair" "deployer" {
 resource "aws_security_group" "sg-webserver" {
     name                = "webserver"
     description         = "Security Group for Web Servers"
-    dynamic "ingress" {
+     dynamic "ingress" {
        for_each    = [80,22,8080,3306]
        protocol    =  "tcp"
        cidr_blocks = [ "0.0.0.0/0" ]
