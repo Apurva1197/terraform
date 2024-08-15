@@ -45,6 +45,7 @@ resource "aws_security_group" "terraform_sg" {
     }
   }
 
+
 # resource block for server creation
 resource "aws_instance" "server_1" {
     ami           = var.ami
