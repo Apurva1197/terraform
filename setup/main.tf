@@ -47,6 +47,7 @@ resource "aws_instance" "server_1" {
     instance_type = var.instance_type
     tags          = var.tags
     
+
 }
 
 
