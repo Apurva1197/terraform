@@ -42,6 +42,7 @@ resource "aws_security_group" "sg-webserver" {
         
     }
 
+
 # resource block for server creation
 resource "aws_instance" "server_1" {
     ami = var.ami
