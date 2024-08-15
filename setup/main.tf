@@ -31,7 +31,7 @@ resource "aws_key_pair" "deployer" {
 }
 
 #resource block for security group creation
-resource "aws_security_group" "allow_tls" {
+resource "aws_security_group" "terraform_" {
   name        = "allow_tls"
   description = "Allow TLS inbound traffic"
   dynamic "ingress" {
