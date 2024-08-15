@@ -62,8 +62,8 @@ resource "aws_instance" "server_1" {
     ami            = var.ami
     instance_type  = var.instance_type
     tags           = var.tags
-    key_name       = data.aws_key_pair.deployer.id
-    security_group = data.aws_security_group.terraform_sg.id
+    # key_name       = data.aws_key_pair.deployer.id
+    # security_group = data.aws_security_group.terraform_sg.id
     user_data      = file("${path.module}/home/ubuntu/terrascript.sh")
 
 }
