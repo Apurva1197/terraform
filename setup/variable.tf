@@ -19,8 +19,8 @@ variable "key_name" {
     description = "calling key-pair"
 }
 
-# variable "tags" {
-#     type = map
+variable "tags" {
+    type = map
 #     # default = {
 #     # Name = "Development-server"
 #     # Enviorment = "staging"
