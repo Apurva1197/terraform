@@ -14,12 +14,12 @@ variable "instance_type" {
   description = "calling instance type"
 }
 
-variable "key_name" {
+variable "aws_key_name" {
     # default = "hybrid"
     description = "calling key-pair"
 }
 
-variable "awssecurity_group" {
+variable "aws_security_group_id" {
     # default = "hybrid"
     description = "calling security-group"
 }
