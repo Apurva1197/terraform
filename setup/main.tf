@@ -1,6 +1,6 @@
 # S3 Bucket
 resource "aws_s3_bucket" "terraform-state" {
-  bucket = "terraform-bucket"
+  bucket = "terraform-buckettt"
 }
 
 resource "aws_s3_bucket_versioning" "terraform-state" {
@@ -27,7 +27,7 @@ resource "aws_dynamodb_table" "state_lock_table" {
 # resource block for key creation
 resource "aws_key_pair" "deployer" {
   key_name   = deployer_key
-  public_key = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMs8SVkQw179X+s4+pCJqCCLHH2z48wdfGOK5PRlzlpc ubuntu@ip-172-31-37-141
+  public_key = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMs8SVkQw179X+s4+pCJqCCLHH2z48wdfGOK5PRlzlpc
 
 
 }
