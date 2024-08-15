@@ -31,15 +31,20 @@ resource "aws_key_pair" "deployer" {
 }
 
 #resource block for security group creation
-resource "aws_security_group" "sg-webserver" {
-    name                = "webserver"
-    description         = "Security Group for Web Servers"
-     dynamic "ingress" {
-       for_each    = [80,22,8080,3306]
-       protocol    =  "tcp"
-       cidr_blocks = [ "0.0.0.0/0" ]
+resource "aws_security_group" "allow_tls" {
+  name        = "allow_tls"
+  description = "Allow TLS inbound traffic"
+  dynamic "ingress" {
+    for_each = [80,8080,443,9090,9000]
+    iterator = port
+    content {
+      description = "TLS from VPC"
+      from_port   = port.value
+      to_port     = port.value
+      protocol    = "tcp"
+      cidr_blocks = ["0.0.0.0/0"]
     }
-}
+  }
 
 # resource block for server creation
 resource "aws_instance" "server_1" {
