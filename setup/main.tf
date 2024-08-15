@@ -35,7 +35,7 @@ resource "aws_security_group" "terraform_sg" {
   name        = "terraform_sg"
   description = "Allow sg inbound traffic"
   dynamic "ingress" {
-    for_each = [80,]
+    for_each = [80,22,8080,330]
     iterator = port
     content {
       description = "TLS from VPC"
