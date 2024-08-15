@@ -51,7 +51,7 @@ data "aws_security_group" "terraform_sg" {
 }
 
 # data block for key
-data "aws_key_pair" "terraform_sg" {
+data "aws_key_pair" "deployer" {
   id = var.aws_security_group_id
 }
 # resource block for server creation
