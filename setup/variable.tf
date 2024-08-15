@@ -21,7 +21,7 @@ variable "key_name" {
 
 variable "security_group" {
     # default = "hybrid"
-    description = "calling s"
+    description = "calling security-group"
 }
 
 
