@@ -27,7 +27,7 @@ resource "aws_dynamodb_table" "state_lock_table" {
 # resource block for key creation
 resource "aws_key_pair" "deployer" {
   key_name   = deployer_key
-  public_key = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC2+nVAxv17L5aFw7BPOaw+lLcwpplKgj5RRJmoq16OS2mzybzjsib5nfZsbiYm1MabMtixkUPQk0JW+24hJlnFVsxAb58yseXCu3w0DhFQ0FM92NJU+U3aGeQKFxECoiwTER9zCDxpv6cwz4v7LG3HBGT6EeUM0f3WsyGRBLHEFtZqa5BS+I5tKkZUlrNclaF9GX3hwE98hOX7nNKSiagmQ0rxagSycGFQjXdXugRTCrE2hDI18HLxHYMLKC+d3T+MgbL0IrdjAXuh3/EVnU3IPk5tiVulQf9XwBtkyBykvnCixturQq+TdoOybYIXwoa4AWvtEolRLsgtcbj3qmtr nishu
+  public_key = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMs8SVkQw179X+s4+pCJqCCLHH2z48wdfGOK5PRlzlpc ubuntu@ip-172-31-37-141
 
 
 }
