@@ -31,7 +31,7 @@ resource "aws_key_pair" "deployer" {
 }
 
 #resource block for security group creation
-resource "aws_security_group" "sg-webserver" 
+resource "aws_security_group" "sg-webserver" {
     name                = "webserver"
     description         = "Security Group for Web Servers"
     dynamic "ingress" {
