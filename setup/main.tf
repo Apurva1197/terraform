@@ -35,9 +35,8 @@ resource "aws_security_group" "sg-webserver" {
     vpc_id              = aws_vpc.vpc.id
     name                = "webserver"
     description         = "Security Group for Web Servers"
-
     dynamic "ingress" {
-        for_each    = [80,22,8080, 3306]
+        for_each    = [80,22,8080,3306]
         protocol    =  "tcp"
         cidr_blocks = [ "0.0.0.0/0" ]
         
