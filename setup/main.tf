@@ -54,7 +54,7 @@ resource "aws_instance" "server_1" {
     instance_type  = var.instance_type
     tags           = var.tags
     key_name       = var.key_pair
-    security_group = var.security_group
+    #security_group = var.security_group
     
 
 
