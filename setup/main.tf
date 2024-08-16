@@ -32,21 +32,21 @@ resource "aws_key_pair" "deployer" {
 
 
 #resource block for security group creation
-resource "aws_security_group" "terraform-sg" {
-  name        = "terraform-sg"
-  description = "Allow sg inbound traffic"
-  dynamic "ingress" {
-    for_each = [80,22,8080,3306]
-    iterator = port
-    content {
-      from_port   = port.value
-      to_port     = port.value
-      protocol    = "tcp"
-      cidr_blocks = ["0.0.0.0/0"]
-    }
-  }
+# resource "aws_security_group" "terraform-sg" {
+#   name        = "terraform-sg"
+#   description = "Allow sg inbound traffic"
+#   dynamic "ingress" {
+#     for_each = [80,22,8080,3306]
+#     iterator = port
+#     content {
+#       from_port   = port.value
+#       to_port     = port.value
+#       protocol    = "tcp"
+#       cidr_blocks = ["0.0.0.0/0"]
+#     }
+#   }
   
-}
+# }
 
 # resource block for server creation
 resource "aws_instance" "server_1" {
