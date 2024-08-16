@@ -53,10 +53,10 @@ data "aws_security_group" "terraform_sg" {
   id = var.aws_security_group_id
 }
 
-# data block for key
-data "aws_key_pair" "deployer" {
-  id = var.aws_key_pair_id
-}
+# # data block for key
+# data "aws_key_pair" "deployer" {
+#   id = var.aws_key_pair_id
+# }
 # resource block for server creation
 resource "aws_instance" "server_1" {
     ami            = var.ami
