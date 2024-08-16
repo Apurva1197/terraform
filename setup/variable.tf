@@ -19,7 +19,10 @@ variable "key_pair" {
     description = "calling key-pair"
 }
 
-v/
+variable "security_group" {
+    # default = "hybrid"
+    description = "calling security-group"
+}
 
 
 variable "tags" {
