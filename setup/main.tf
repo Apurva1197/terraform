@@ -24,29 +24,6 @@ resource "aws_dynamodb_table" "state_lock_table" {
 
 
 
-# # resource block for key creation
-# resource "aws_key_pair" "deployer" {
-#   key_name   = "deployer"
-#   public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF3jdowZJ/fBcqKaNUhhcgwlsyw6wa1f9FN+aw1ye63U"
-# }
-
-
-#resource block for security group creation
-# resource "aws_security_group" "terraform-sg" {
-#   name        = "terraform-sg"
-#   description = "Allow sg inbound traffic"
-#   dynamic "ingress" {
-#     for_each = [80,22,8080,3306]
-#     iterator = port
-#     content {
-#       from_port   = port.value
-#       to_port     = port.value
-#       protocol    = "tcp"
-#       cidr_blocks = ["0.0.0.0/0"]
-#     }
-#   }
-  
-# }
 
 # resource block for server creation
 resource "aws_instance" "server-1" {
