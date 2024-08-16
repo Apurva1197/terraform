@@ -14,7 +14,7 @@ variable "instance_type" {
   description = "calling instance type"
 }
 
-variable "aey_pair" {
+variable "key_pair" {
     # default = "hybrid"
     description = "calling key-pair"
 }
