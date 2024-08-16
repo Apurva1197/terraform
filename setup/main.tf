@@ -32,7 +32,7 @@ resource "aws_key_pair" "deployer" {
 
 
 #resource block for security group creation
-resource "aws_security_group" "terraform_sg" {
+resource "aws_security_group" "terraform-sg" {
   name        = "terraform_sg"
   description = "Allow sg inbound traffic"
   dynamic "ingress" {
