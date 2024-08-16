@@ -65,7 +65,6 @@ resource "aws_instance" "server_1" {
     # key_name       = data.aws_key_pair.deployer.id
     # security_group = data.aws_security_group.terraform_sg.id
     
-    #   }
 
 
 }
