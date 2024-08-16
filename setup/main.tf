@@ -33,7 +33,7 @@ resource "aws_key_pair" "deployer" {
 
 #resource block for security group creation
 resource "aws_security_group" "terraform-sg" {
-  name        = "terraform_sg"
+  name        = "terraform-sg"
   description = "Allow sg inbound traffic"
   dynamic "ingress" {
     for_each = [80,22,8080,3306]
@@ -48,16 +48,7 @@ resource "aws_security_group" "terraform-sg" {
   
 }
 
-# # data block for sg
-# data "aws_security_group" "terraform-sg" {
-#   id = var.aws_security_group_id
-# }
-
-# # data block for key
-# data "aws_key_pair" "deployer" {
-#   id = var.aws_key_pair_id
-# }
-# resource block for server creation
+ resource block for server creation
 resource "aws_instance" "server_1" {
     ami            = var.ami
     instance_type  = var.instance_type
