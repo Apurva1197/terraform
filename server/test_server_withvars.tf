@@ -47,7 +47,7 @@ variable "instance_type" {
 }
 
 variable "key_name" {
-  default = "hybrid"
+  default = "nishad"
   description = "key calling"
 }
 
