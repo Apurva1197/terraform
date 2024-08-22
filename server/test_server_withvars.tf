@@ -55,7 +55,7 @@
 #   type = map
 #   default = {
 #     Enviorment = "staging"
-#     owner = "jarvis"    SSSs
+#     owner = "jarvis"
 #   }
 # }
 
