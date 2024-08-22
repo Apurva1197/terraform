@@ -16,7 +16,7 @@ provider "aws" {
 resource "aws_instance" "this" {
   ami                     = "ami-0ad21ae1d0696ad58"
   instance_type           = "t2.micro"
-  key_name                = "nishu"
+  key_name                = "nishad"
   tags = {
     Enviorment = "staging"
     owner = "jarvis"    
