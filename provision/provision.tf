@@ -2,7 +2,7 @@
  resource "aws_instance" "this_aws_instance" {
     ami = "ami-0eb5115914ccc4bc2"
     vpc_security_group_ids = ["sg-081787a4571bd9c08"]
-    key_name = "anup_deleteni"
+    key_name = "nishad"
     instance_type = "t2.micro"
      
      provisioner "file" {
