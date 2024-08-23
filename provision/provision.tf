@@ -3,7 +3,7 @@
     ami = "ami-0ad21ae1d0696ad58"
     key_name = "nishad"
     instance_type = "t2.micro"
- } 
+ 
      provisioner "file" {
     source      = "readme.md"
     destination = "/home/ubuntu/readme.md"
