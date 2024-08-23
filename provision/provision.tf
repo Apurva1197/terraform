@@ -5,7 +5,7 @@
     key_name = "nishad"
     instance_type = "t2.micro"
      provisioner "file" {
-    source      = "/home/ubuntu/script"
+    source      = "/home/ubuntu/script.sh"
     destination = "/media/"
   }
    provisioner "local-exec" {
