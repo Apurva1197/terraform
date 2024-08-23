@@ -23,7 +23,7 @@
     working_dir = "/tmp/"
     command = "echo ${self.private_ip} >> workingdir_private_ips.txt "
   }
- }
+ 
 
   
   
