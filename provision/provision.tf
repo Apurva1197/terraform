@@ -1,7 +1,7 @@
 
  resource "aws_instance" "this_aws_instance" {
     ami = "ami-0ad21ae1d0696ad58"
-    vpc_security_group_ids = ["sg-0b0e77d9a4f54b0d0"]
+    vpc_security_group_ids = [""]sg-0d05c3fc8cadd1926
     key_name = "nishad"
     instance_type = "t2.micro"
  
