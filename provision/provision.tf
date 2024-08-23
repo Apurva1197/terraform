@@ -8,7 +8,7 @@
     source      = "readme.md"
     destination = "/home/ubuntu/readme.md"
       connection {
-    type     = "ssh"ami-0ad21ae1d0696ad58
+    type     = "ssh
     user     = "ubuntu"
     private_key = file("${path.module}/id_rsa")
     host     = "${self.public_ip}"
@@ -22,6 +22,7 @@
     provisioner "local-exec" {
     working_dir = "/tmp/"
     command = "echo ${self.private_ip} >> workingdir_private_ips.txt "
+  }
 
   
   
