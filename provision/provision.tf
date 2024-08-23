@@ -14,7 +14,7 @@
     connection {
     type     = "ssh"
     user     = "ubuntu"
-    private_key = "ec2-private"
+    private_key = "nishad"
     host     = self.public_ip
   }
 
