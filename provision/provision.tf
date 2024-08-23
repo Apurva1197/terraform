@@ -13,7 +13,7 @@
   }
     connection {
     type     = "ssh"
-    user     = "ec2-user"
+    user     = "ubuntu"
     private_key = "ec2-private"
     host     = self.public_ip
   }
