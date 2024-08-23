@@ -10,7 +10,7 @@
       connection {
     type     = "ssh"
     user     = "ubuntu"
-    private_key = file("${path.module}/id_rsa")
+    private_key = "nishad.pem"
     host     = "${self.public_ip}"
   }
   
