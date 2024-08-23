@@ -1,6 +1,6 @@
 
  resource "aws_instance" "this_aws_instance" {
-    ami = "ami-0eb5115914ccc4bc2"
+    ami = ""
     key_name = "nishad"
     instance_type = "t2.micro"
      
