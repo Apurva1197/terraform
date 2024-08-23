@@ -31,8 +31,7 @@
       "sudo systemctl enable nginx"       # Enable Nginx to start on boot
     ]
   }
-
-  
+ }
   
   
   
