@@ -1,6 +1,6 @@
 # S3 Bucket
-resource "aws_s3_bucket" "terra" {
-  bucket = "apurvaterra-buck"
+resource "aws_s3_bucket" "terraform-bucket" {
+  bucket = ""
 }
 
 resource "aws_s3_bucket_versioning" "terraform-state" {
