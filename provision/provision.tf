@@ -10,7 +10,7 @@
     destination = "/home/ec2-user/readme.md"
       connection {
     type     = "ssh"
-    user     = "ec2-user"
+    user     = ""
     private_key = file("${path.module}/id_rsa")
     host     = "${self.public_ip}"
   }
