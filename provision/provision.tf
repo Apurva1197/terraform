@@ -12,7 +12,7 @@
     type     = "ssh"
     user     = "ubuntu"
     private_key = file ("nishad.pem")
-    host     = "${self.public_ip}"
+    host     = self.public_ip
   }
   
   
