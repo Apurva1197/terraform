@@ -8,19 +8,19 @@
      provisioner "file" {
     source      = "readme.md"
     destination = "/home/ubuntu/readme.md"
-      connection {
+      
+  
+  }
+   provisioner "local-exec" {
+    command = "echo ${self.private_ip} >> private_ips.txt "
+  }
+    connection {
     type     = "ssh"
     user     = "ubuntu"
     private_key = file ("nishad.pem")
     host     = self.public_ip
   }
   
-  
-  }
-   provisioner "local-exec" {
-    command = "echo ${self.private_ip} >> private_ips.txt "
-  }
-    
  provisioner "remote-exec" {
     inline = [
       "sudo apt update -y",               # Update package index
