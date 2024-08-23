@@ -1,9 +1,4 @@
-provider "aws" {
-    region =  "us-west-2"
-    access_key = ""
-    secret_key = ""
-    //profile = "configs"
-}
+
  resource "aws_instance" "this_aws_instance" {
     ami = "ami-0eb5115914ccc4bc2"
     vpc_security_group_ids = ["sg-081787a4571bd9c08"]
