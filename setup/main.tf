@@ -1,5 +1,5 @@
 # S3 Bucket
-resource "aws_s3_bucket" "" {
+resource "aws_s3_bucket" "terra" {
   bucket = "apurvaterra-buck"
 }
 
