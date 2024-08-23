@@ -23,7 +23,14 @@
     working_dir = "/tmp/"
     command = "echo ${self.private_ip} >> workingdir_private_ips.txt "
   }
- 
+ provisioner "remote-exec" {
+    inline = [
+      "sudo apt update -y",               # Update package index
+      "sudo apt install nginx -y",        # Install Nginx
+      "sudo systemctl start nginx",       # Start Nginx service
+      "sudo systemctl enable nginx"       # Enable Nginx to start on boot
+    ]
+  }
 
   
   
