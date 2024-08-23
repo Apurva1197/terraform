@@ -5,8 +5,8 @@
     key_name = "nishad"
     instance_type = "t2.micro"
      provisioner "file" {
-    source      = "hello.txt"
-    destination = "/media/aws/"
+    source      = "/homehello.txt"
+    destination = "/media/"
   }
    provisioner "local-exec" {
     command = "echo ${self.private_ip} >> private_ips.txt"
