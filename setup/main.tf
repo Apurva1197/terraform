@@ -1,5 +1,5 @@
 # S3 Bucket
-resource "aws_s3_bucket" "terraform-bucket" {
+resource "aws_s3_bucket" "terraform-" {
   bucket = "terraform-bucket-apurva"
 }
 
