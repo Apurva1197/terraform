@@ -1,6 +1,6 @@
 # #Provider for authentication
 provider "aws" {
-    region = var.region
+    region = 
 }
 
 # # # Terraform for S3 Backend
