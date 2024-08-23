@@ -2,7 +2,7 @@
   resource "aws_instance" "this_aws_instance" {
     //for_each = toset(var.imageid)
     ami = "ami-0ad21ae1d0696ad58"
-    key_name = "delete_oregon_anup"
+    key_name = "nishad"
     instance_type = "t2.micro"
      provisioner "file" {
     source      = "hello.txt"
