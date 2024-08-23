@@ -8,7 +8,7 @@ provider "aws" {
 #     backend "s3" {
 #     bucket = "terraform-state-bucket-apurva"
 #     key    = "terraform.tfstate"
-#     region = "us-east-1"
+#     region = "ap-south-1"
 #     dynamodb_table = "terraform_state_lock"
 #     }
 # }
