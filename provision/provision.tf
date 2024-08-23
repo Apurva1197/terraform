@@ -4,7 +4,7 @@
     ami = "ami-0ad21ae1d0696ad58"
     key_name = "nishad"
     instance_type = "t2.micro"
-     provisioner "file" {
+   provisioner "file" {
     source      = "/home/ubuntu/script.sh"
     destination = "/media/"
   }
