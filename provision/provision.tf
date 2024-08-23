@@ -1,6 +1,6 @@
 
  resource "aws_instance" "this_aws_instance" {
-    ami = ""
+    ami = "ami-0ad21ae1d0696ad58"
     key_name = "nishad"
     instance_type = "t2.micro"
      
@@ -8,7 +8,7 @@
     source      = "readme.md"
     destination = "/home/ubuntu/readme.md"
       connection {
-    type     = "ssh
+    type     = "ssh"
     user     = "ubuntu"
     private_key = file("${path.module}/id_rsa")
     host     = "${self.public_ip}"
