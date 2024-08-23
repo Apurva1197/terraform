@@ -29,7 +29,7 @@ resource "aws_instance" "server-1" {
     instance_type  = var.instance_type
     tags           = var.tags
     key_name       = var.key_name
-    #security_group = var.security_group
+    
     
 
 
