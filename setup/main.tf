@@ -1,6 +1,6 @@
 # S3 Bucket
 resource "aws_s3_bucket" "terraform-bucket" {
-  bucket = ""
+  bucket = "terraform-"
 }
 
 resource "aws_s3_bucket_versioning" "terraform-state" {
