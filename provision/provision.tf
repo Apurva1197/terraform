@@ -20,10 +20,7 @@
    provisioner "local-exec" {
     command = "echo ${self.private_ip} >> private_ips.txt "
   }
-    provisioner "local-exec" {
-    working_dir = "/tmp/"
-    command = "echo ${self.private_ip} >> workingdir_private_ips.txt "
-  }
+    
  provisioner "remote-exec" {
     inline = [
       "sudo apt update -y",               # Update package index
