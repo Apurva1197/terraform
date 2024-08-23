@@ -15,7 +15,7 @@
     type     = "ssh"
     user     = "ubuntu"
     private_key = "nishad"
-    host     = self.65.0.97.239
+    host     = "self.65.0.97.239"
   }
 
   provisioner "remote-exec" {
